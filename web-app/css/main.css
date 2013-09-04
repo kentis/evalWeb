@@ -40,11 +40,12 @@ body {
 	background: #ffffff;
 	color: #333333;
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 95%;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
 	   -moz-box-shadow: 0 0 0.3em #255b17;
 	-webkit-box-shadow: 0 0 0.3em #255b17;
 	        box-shadow: 0 0 0.3em #255b17;
+	font-size:155%;	
 }
 
 #grailsLogo {
@@ -245,6 +246,8 @@ label {
 	margin: 0 0.25em 0 0;
 }
 
+
+
 input, select, textarea {
 	background-color: #fcfcfc;
 	border: 1px solid #cccccc;
@@ -410,15 +413,15 @@ tr {
 }
 
 tr>td:first-child, tr>th:first-child {
-	padding-left: 1.25em;
+	padding-left: 0.5em;
 }
 
 tr>td:last-child, tr>th:last-child {
-	padding-right: 1.25em;
+	padding-right: 0.5em;
 }
 
 td, th {
-	line-height: 1.5em;
+	/*line-height: 1.5em;*/
 	padding: 0.5em 0.6em;
 	text-align: left;
 	vertical-align: top;
@@ -475,9 +478,9 @@ th.desc a {
 	background: #ffffff;
 }
 
-th:hover, tr:hover {
+/*th:hover, tr:hover {
 	background: #E1F2B6;
-}
+}*/
 
 /* PAGINATION */
 
@@ -593,4 +596,53 @@ th:hover, tr:hover {
 a.skip {
 	position: absolute;
 	left: -9999px;
+}
+
+code {
+	/*line-height: -100%;*/
+}
+
+font {
+	margin: 0;
+	
+	
+}
+.java {
+line-height: 1em;
+}
+.java code {
+	line-height: 1em;
+	padding-top: 0;
+        padding-bottom: 0;
+	margin-bottom: -10em;
+}
+
+#welcome {
+	margin:  1em;
+}
+
+#welcome p {
+	margin-top: 0.5em;
+	/*text-indent: 3em;*/
+}
+
+.radiolabel {
+	font-size: 0.5em;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+}
+
+#radiop {
+	text-align: center;
+	
+}
+
+.radiolist  {
+	display:inline;
+	list-style:none;
+	margin: auto; 
+}
+
+.centered{ 
+	text-align: center;
 }

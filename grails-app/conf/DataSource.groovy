@@ -1,6 +1,9 @@
 dataSource {
     pooled = true
     driverClassName = "org.h2.Driver"
+    //dialect = org.hibernate.dialect.H2Dialect
+    //pooled = false
+    //driverClassName = "org.hsqldb.jdbcDriver"
     username = "sa"
     password = ""
 }
@@ -15,6 +18,7 @@ environments {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+	    //url = "jdbc:hsqldb:mem:devDB"
         }
     }
     test {
@@ -26,7 +30,7 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            url = "jdbc:h2:file:~/evalDbTOD142;MVCC=TRUE;LOCK_TIMEOUT=10000"
             pooled = true
             properties {
                maxActive = -1
